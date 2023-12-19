@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Myrrhea Belle Junsay</title>
+        <link rel="stylesheet" href="style/index_style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    </head> 
+
+    <body>
+
+
+        <section class="sub-header">
+          <nav>
+            <a href="index.html"><img src="style/images/myrr_logo.png"></a>
+            <div class="nav-links" id="navLinks">
+              <i class="fa fa-times" onclick="hideMenu()"></i>
+              <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="interests.html">INTERESTS</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+              </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+          </nav>
+          <h1>About Me</h1>
+        </section>
+
+
+        <section class="about-me">
+            <div class="row">
+                <div class="about-col">
+                    <h1>I am Myrrhea Belle Junsay!</h1>
+                    <p>I am a multi-faceted individual — a dedicated computer science student at West Visayas State University, a passionate journalist and writer, an advocate, and more. Beyond academics, I navigate life as a devoted daughter, a reliable yet goofy older sister, and a loving friend. In this journey called, I embrace each role, and everything I do defines the person that I am.<br><br>As a computer science student, I delve into the fascinating world of technology, constantly seeking to expand my knowledge and skills. Journalism and writing serve as my creative outlets, allowing me to share stories and advocate for causes close to my heart. In every role — whether as a daughter, sister, friend, or student — I bring a blend of dedication, warmth, and determination.</p>
+                    <a href="index.html" class="hero-btn pink-btn">EXPLORE NOW</a>
+                </div>
+                <div class="about-col">
+                    <img src="style/images/myrr_about.png">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="footer">
+            <h4>About Me</h4>
+            <p>Exploring the landscapes of life, embracing genuine connections, and navigating<br>the journey with warmth and authenticity — this is me, in a nutshell.</p>
+            <div class="icons">
+              <a href="https://www.facebook.com/mbelle.junsay" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/bellemariano02" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/myrror_myrror/" target="_blank"><i class="fa fa-instagram"></i></a>
+              <a href="https://open.spotify.com/user/314yrkvpw2gatgpkjd4obutwlwz4?si=53169e7e2a394309" target="_blank"><i class="fa fa-spotify"></i></a>
+            </div>
+            <p><i class="fa fa-copyright"></i> 2023</p>
+        </section>
+  
+        <button id="toTopBtn" onclick="scrollToTop()"><i class="fa fa-arrow-up"</button>
+  
+        <script>
+            window.addEventListener("scroll", function () {
+                var scrolledHeight = window.scrollY;
+                var subHeader = document.querySelector(".sub-header");
+                subHeader.style.backgroundPositionY = -(scrolledHeight * 1) + "px";
+            });
+        </script>
+
+        <script>
+            window.onscroll = function () {
+                showToTopButton();
+            };
+            function showToTopButton() {
+              var toTopBtn = document.getElementById("toTopBtn");
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                toTopBtn.style.display = "block";
+              } else {
+                toTopBtn.style.display = "none";
+              }
+            }
+            function scrollToTop() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+        </script>
+  
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+  
+  
+      </body>
+   </html>
